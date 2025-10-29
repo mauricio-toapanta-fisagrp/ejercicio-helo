@@ -12,6 +12,7 @@ container:
  
 labels:
   app: "mi-app-2"
-minReplicas: 1
-maxReplicas: 5
+hpa:
+  minReplicas: 1
+  maxReplicas: 5
 name: helm-01
