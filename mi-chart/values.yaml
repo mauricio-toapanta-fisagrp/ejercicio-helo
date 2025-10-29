@@ -1,3 +1,17 @@
 container:
   tag: 20
   port: 3000
+  image: "hola-mundo-clase-86"
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "800Mi"
+    limits:
+      cpu: "1000m"
+      memory: "1500Mi"
+ 
+labels:
+  app: "mi-app-2"
+minReplicas: 1
+maxReplicas: 5
+name: helm-01

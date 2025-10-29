@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mi-servicio-30
+  name: mi-servicio-{{ .Values.name }}
   namespace: mauricio-toapanta-dev  # Asegúrate de que coincida con tu Deployment
 spec:
   selector:
-    app: mi-app-30  # Debe coincidir con las labels del Deployment
+    app: mi-app-{{ .Values.name }}  # Debe coincidir con las labels del Deployment
   ports:
     - protocol: TCP
       port: 4000        # Puerto del Service
