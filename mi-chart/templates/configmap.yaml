@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: mi-configmap-m
-  namespace: mauricio-toapanta-dev
+  name: mi-configmap-{{ .Values.name }}
+  namespace: {{ .Values.namespace }}
 data:
-  DATABASE: "192.168.1.1"
+  DATABASE: "{{ .Values.configmap.database }}"

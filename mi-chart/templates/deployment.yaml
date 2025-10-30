@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mi-deployment-{{ .Values.name }}
-  namespace: mauricio-toapanta-dev
+  namespace: {{ .Values.namespace }}
   labels:
     app: mi-app-{{ .Values.name }}
     areanegocio: tecnologia
